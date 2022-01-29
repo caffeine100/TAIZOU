@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F236393F"
+    tools:context=".Config">
+
+
+    <ImageButton
+        android:id="@+id/img_twitter"
+        android:layout_width="86dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/twitter"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tv_config_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:text="マイページ"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_config_reward"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="45dp"
+        android:background="#1E87DA"
+        android:backgroundTint="#1E87DA"
+        android:text="レベルごとの報酬確認"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_config_icon"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/bt_config_logout"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:background="#1E87DA"
+        android:text="ログアウト"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_config_experience_point"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_config_degree"
+        android:layout_width="356dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="null"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_twitter" />
+
+    <ProgressBar
+        android:id="@+id/pr_config_experience_point"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+
+        android:layout_marginEnd="36dp"
+        android:progressTint="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_config_experience_point" />
+
+    <ImageView
+        android:id="@+id/img_config_icon"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_config_degree" />
+
+    <TextView
+        android:id="@+id/tv_config_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="null"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_config_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_config_degree" />
+
+    <TextView
+        android:id="@+id/tv_config_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="445"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_config_lvss"
+        app:layout_constraintTop_toBottomOf="@+id/img_config_icon" />
+
+    <Button
+        android:id="@+id/bt_config_info"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="45dp"
+        android:background="#1E87DA"
+        android:text="各種情報変更"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_config_experience_point"
+        app:rippleColor="@color/black"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_config_experience_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="10/100"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_config_lvss" />
+
+    <TextView
+        android:id="@+id/tv_config_lvss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="50dp"
+        android:text="Lv."
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_config_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

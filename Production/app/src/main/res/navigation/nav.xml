@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/begin">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.websarva.wings.android.production.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/begin"
+        android:name="com.websarva.wings.android.production.Begin"
+        android:label="fragment_begin"
+        tools:layout="@layout/fragment_begin" >
+        <action
+            android:id="@+id/action_begin_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/begin"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_begin_to_home2"
+            app:destination="@id/home2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/begin"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.websarva.wings.android.production.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.websarva.wings.android.production.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_begin"
+            app:destination="@id/begin" />
+        <action
+            android:id="@+id/action_home2_to_tab1Detail"
+            app:destination="@id/tab1Detail"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home2_to_config2"
+            app:destination="@id/config2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/tab1Detail"
+        android:name="com.websarva.wings.android.production.Tab1Detail"
+        android:label="fragment_tab1_detail"
+        tools:layout="@layout/fragment_tab1_detail" >
+        <argument
+            android:name="itemName"
+            app:argType="string"
+            android:defaultValue="oooo" />
+        <argument
+            android:name="explanation"
+            app:argType="string[]"
+            app:nullable="true"/>
+        <argument
+            android:name="position"
+            app:argType="string"
+            android:defaultValue="null" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/config2"
+        android:name="com.websarva.wings.android.production.Config"
+        android:label="fragment_config"
+        tools:layout="@layout/fragment_config" >
+        <action
+            android:id="@+id/action_config2_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/login"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_config2_to_configInfo"
+            app:destination="@id/configInfo"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_config2_to_configReward"
+            app:destination="@id/configReward"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/configInfo"
+        android:name="com.websarva.wings.android.production.ConfigInfo"
+        android:label="fragment_config_info"
+        tools:layout="@layout/fragment_config_info" >I
+        <action
+            android:id="@+id/action_configInfo_to_configIconChange"
+            app:destination="@id/configIconChange"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_configInfo_to_configDegreeChange"
+            app:destination="@id/configDegreeChange"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_configInfo_to_configNameChange"
+            app:destination="@id/configNameChange"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_configInfo_to_configPasswordChange"
+            app:destination="@id/configPasswordChange"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_configInfo_to_configAccountDelete"
+            app:destination="@id/configAccountDelete"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_configInfo_to_configEmailChange"
+            app:destination="@id/configEmailChange"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/configIconChange"
+        android:name="com.websarva.wings.android.production.ConfigIconChange"
+        android:label="fragment_config_icon_change"
+        tools:layout="@layout/fragment_config_icon_change" />
+    <fragment
+        android:id="@+id/configNameChange"
+        android:name="com.websarva.wings.android.production.ConfigNameChange"
+        android:label="fragment_config_name_change"
+        tools:layout="@layout/fragment_config_name_change" />
+    <fragment
+        android:id="@+id/configDegreeChange"
+        android:name="com.websarva.wings.android.production.ConfigDegreeChange"
+        android:label="fragment_config_degree_change"
+        tools:layout="@layout/fragment_config_degree_change" />
+    <fragment
+        android:id="@+id/configReward"
+        android:name="com.websarva.wings.android.production.ConfigReward"
+        android:label="fragment_config_reward"
+        tools:layout="@layout/fragment_config_reward" />
+    <fragment
+        android:id="@+id/configPasswordChange"
+        android:name="com.websarva.wings.android.production.ConfigPasswordChange"
+        android:label="fragment_config_password_change"
+        tools:layout="@layout/fragment_config_password_change" />
+    <fragment
+        android:id="@+id/configAccountDelete"
+        android:name="com.websarva.wings.android.production.ConfigAccountDelete"
+        android:label="fragment_config_account_delete"
+        tools:layout="@layout/fragment_config_account_delete" >
+        <action
+            android:id="@+id/action_configAccountDelete_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/configAccountDelete"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/configEmailChange"
+        android:name="com.websarva.wings.android.production.ConfigEmailChange"
+        android:label="fragment_config_email_change"
+        tools:layout="@layout/fragment_config_email_change" />
+</navigation>

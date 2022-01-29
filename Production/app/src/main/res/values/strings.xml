@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TAIZOU</string>
+
+    <string name="sign_up">新規登録</string>
+    <string name="name">名前</string>
+    <string name="pas">パスワード</string>
+    <string name="pasEquals">パスワード確認</string>
+    <string name="email">メールアドレス</string>
+    <string name="today_body_width">今日の体重</string>
+    <string name="kg">kg</string>
+</resources>
